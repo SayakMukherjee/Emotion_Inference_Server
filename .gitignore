@@ -1,0 +1,6 @@
+Multitask-Emotion-Recognition-with-Incomplete-Labels/
+opencv*
+emotic
+data/*
+*/__pycache__/*
+.ipynb_checkpoints
