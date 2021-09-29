@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, make_response
+from flask import Flask
 from lib.yolo_inference import yolo_infer2
 from lib.emotic import Emotic
 import numpy as np
@@ -45,21 +45,13 @@ def get_emotion():  # put application's code here
         xs, _, r = yolo_infer2(frame, 'experiment/results/',
                                'experiment/models/', context_norm, body_norm, ind2cat, ind2vad, write_op=False,
                                return_op=False)
-        response = make_response(
-            jsonify(
-                {"message": str(xs['bbox_0']['cat']), "category": "success"}
-            ),
-            200,
-        )
-    except:
-        response = make_response(
-            jsonify(
-                {"message": "Error", "category": "error"}
-            ),
-            404,
-        )
+        
+        response = str(xs['bbox_0']['cat'][0])
 
-    response.headers["Content-Type"] = "application/json"
+    except:
+        
+        response = "Error"
+
     return response
 
 
