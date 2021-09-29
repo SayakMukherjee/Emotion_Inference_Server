@@ -24,3 +24,12 @@ To make it easier for you we have hosted the EMOTIC dataset as well, if you inte
 **Link to data**: https://tud365.sharepoint.com/:f:/s/ConversationalAgents2021/EoSyoFarxCJFoZrfkgft3iQBnpRRPZNavJ6La5ZfRhrFXw?e=61LcKf
 
 If you do not wish to train the model from scratch, section 12 will show you how you can use pretrained versions of the model along with a few examples
+
+# Implementation Details
+
+## To run the inference server
+
+1. Execute app.py
+2. Server runs on localhost port 5000
+3. API call http://127.0.0.1:5000/api/v1/getEmotion returns the emotion with the highest probabilty
+4. In case the model fails it returns "Error"
