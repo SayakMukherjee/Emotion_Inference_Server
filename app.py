@@ -37,19 +37,18 @@ cap = cv2.VideoCapture(0)
 
 
 @app.route('/api/v1/getEmotion', methods=['GET', 'POST'])
-def get_emotion():  # put application's code here
+def get_emotion():
+
     ret, frame = cap.read()
     frame = cv2.flip(frame, 1)  # Flip camera horizontally
 
     try:
-        xs, _, r = yolo_infer2(frame, 'experiment/results/',
+        xs, _, _ = yolo_infer2(frame, 'experiment/results/',
                                'experiment/models/', context_norm, body_norm, ind2cat, ind2vad, write_op=False,
                                return_op=False)
-        
-        response = str(xs['bbox_0']['cat'][0])
+        response = str(xs['bbox_0']['cat'][0]) + "~" + str(xs['bbox_0']['cont'][0])
 
     except:
-        
         response = "Error"
 
     return response
