@@ -2,7 +2,7 @@
 This project is a part of the course CS4270: Conversational Agents at Delft University of Technology.
 
 Detects users emotion based on captured frame. API calls are made to this server from the 
-conversational agent MathTutor. The code for the MathTutor can be found in https://github.com/paucanosa/MathTutor.
+conversational agent MathTutor. The code for the MathTutor can be found <a href="https://github.com/paucanosa/MathTutor">here</a>.
 
 # Dependencies
 
@@ -25,6 +25,7 @@ To make it easier for you we have hosted the EMOTIC dataset as well, if you inte
 
 If you do not wish to train the model from scratch, section 12 will show you how you can use pretrained versions of the model along with a few examples
 
+Pretrained model files located at <a href="https://tud365-my.sharepoint.com/:u:/g/personal/smukherjee1_tudelft_nl/Ee9KHDkV62JOhdG0kCQmV-0BJ1IEMlCa1FJGJAoPKZhekg?e=gMj2NE">OneDrive</a>.
 # Implementation Details
 
 ## To run the inference server
