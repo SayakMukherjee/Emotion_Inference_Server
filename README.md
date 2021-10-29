@@ -1,8 +1,8 @@
-# Affect Lab
+# Emotion Inference Server
+This project is a part of the course CS4270: Conversational Agents at Delft University of Technology.
 
-This lab will teach you the implementation level basics about detecting catgorical emotions such as anger, happiness, fearand confusion among others. Along with categorical emotions you'll also be able to extract continuous affection information in the valence-arousal-dominance domain.
-
-Furthermore, you are expected to apply your newfound knowledge to the CS4270 course project-you may reuse the code provided in this lab or develop your own. At the very least we expect your agent to possess affect/emotion detection capabilities.
+Detects users emotion based on captured frame. API calls are made to this server from the 
+conversational agent MathTutor. The code for the MathTutor can be found in https://github.com/paucanosa/MathTutor.
 
 # Dependencies
 
